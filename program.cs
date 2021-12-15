@@ -33,7 +33,7 @@ namespace EEG324_GROUP6_Q1
            //NB:Vcc is (Vtrs - Vdrop) * √2, where Vdrop has a constant of 0.7 *2
            double Vcc = (Vtrs - 1.4) * (Math.Sqrt(2));
            double Rs = (Vcc - Vled)/Iled;
-           Console.WriteLine($"The value of Rs is {Rs}");
+           Console.WriteLine($"The value of Rs is {Rs} ");
            
            
            //Give space to separate it for each group
@@ -53,16 +53,19 @@ namespace EEG324_GROUP6_Q1
         static void Main(string[] args)
         {
             //create group1 to group10 objects
-            Val group1 = new Val(6, 1.5, 10);
-            Val group2 = new Val(6, 2.5, 10);
-            Val group3 = new Val(9, 1.5, 10);
-            Val group4 = new Val(9, 2.5, 10);
-            Val group5 = new Val(12, 1.5, 10);
-            Val group6 = new Val(12, 2.5, 10);
-            Val group7 = new Val(15, 1.5, 10);
-            Val group8 = new Val(15, 2.5, 10);
-            Val group9 = new Val(25, 1.5, 10);
-           Val group10 = new Val(25, 2.5, 10);
+            //NB:Iled is in milliAmperes
+            //10mA equals to 0.01A
+            //Therefore, our Iled is 0.01A
+            Val group1 = new Val(6, 1.5, 0.01);
+            Val group2 = new Val(6, 2.5, 0.01);
+            Val group3 = new Val(9, 1.5, 0.01);
+            Val group4 = new Val(9, 2.5, 0.01);
+            Val group5 = new Val(12, 1.5, 0.01);
+            Val group6 = new Val(12, 2.5, 0.01);
+            Val group7 = new Val(15, 1.5, 0.01);
+            Val group8 = new Val(15, 2.5, 0.01);
+            Val group9 = new Val(25, 1.5, 0.01);
+           Val group10 = new Val(25, 2.5, 0.01);
            
            
            //Display the value of Rs for Group1 to Group 10
@@ -82,4 +85,3 @@ namespace EEG324_GROUP6_Q1
    //End of the app
     
 }
-
